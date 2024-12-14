@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "nodenext",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "baseUrl": "./"
+  },
+  "include": ["**/*.ts"]
+}
