@@ -1,0 +1,4 @@
+cucumber-report
+node_modules
+playwright-report
+test-results

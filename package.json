@@ -4,16 +4,14 @@
   "author": {
     "name": "wisdom amopho"
     },
+    "license": "MIT",
   "type": "commonjs",
   "scripts": {
     "test": "npx bddgen && npx playwright test",
-    "report": "npx http-server ./cucumber-report -c-1 -o index.html",
+    "report:html": "npx playwright show-report",
     "watch:bdd": "nodemon -w ./features -w ./steps -e feature,js,ts --exec \"npx bddgen\"",
     "watch:pw": "playwright test --ui",
-    "watch": "run-p watch:*",
-    "fix-lint": "npx eslint --fix --ext .ts .",
-    "format": "npx prettier --write .",
-    "eslint": "npx eslint test/**/*.ts"
+    "watch": "run-p watch:*"
   },
   "devDependencies": {
     "@eslint/js": "^9.16.0",

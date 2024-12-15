@@ -12,6 +12,5 @@ export default tseslint.config(
       "@typescript-eslint/no-explicit-any": "error",
     },
   },
-  
 );  
 
