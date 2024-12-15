@@ -17,7 +17,7 @@ This repository contains AM Digital Technical Challenge for the Senior Test Engi
 
 ## Approach
 
-[Playwright-bdd](https://github.com/vitalets/playwright-bdd), Playwright runner and Typescript was selected for this assessment as this closely aligned with the requirement (test cases in Gherkin syntax), but mainly because of some of these benefits listed below
+[Playwright-bdd](https://github.com/vitalets/playwright-bdd), Playwright runner, and Typescript were selected for this assessment as they closely aligned with the requirement (test cases in Gherkin syntax), but mainly because of some of these benefits listed below
 
 - Automatic browser initialization and cleanup
 - Auto-waiting of page elements
@@ -27,19 +27,19 @@ This repository contains AM Digital Technical Challenge for the Senior Test Engi
 
 ## Installation
 
-To get started with this project, you will need to have the latest version of Node.js and npm installed on your machine. You can then clone this repository and install the dependencies using the following commands:
+To start this project, you will need the latest version of Node.js and npm installed on your machine. You can then clone this repository and install the dependencies using the following commands:
 
 Clone the repo to your local
 
 ```bash
   gh repo clone wisdomamopho/am-digital
 ```
-Change directory to `am-digital`
+Change the directory to `am-digital`
 
 ```bash
   cd am-digital
 ```
-Install dependecies
+Install dependencies
 ```bash
  npm install
 ```
@@ -50,7 +50,7 @@ Install browsers
 
 
     
-## Runing the test
+## Running the test
 
 to run the test files from the Gherkin documents (.feature files)
 
@@ -61,7 +61,7 @@ npm test
 
 ## Run the test in watch mode
 
-To watch feature / steps files and automatically regenerate tests you can use
+To watch feature/steps files and automatically regenerate tests you can use
 ```bash
 npm run watch
 ```
@@ -81,7 +81,7 @@ npm run report:html
 ### Limitations
 ***Site/server performance*** understanding how the frontend and server works, such as Infinite scroll, server latencies, data delivery mechanisms and chain requests etc
 
-***Page context scope*** I realised mid-way through the assessment that the page contexts was limited between step `Given`, `When`, and `Then` blocks in the *.step* files. This is probably due to the extra layer Cucumber adds to playwright as this is not the case with vanilla playwright
+***Page context scope*** I realised mid-way through the assessment that the page contexts were limited between step `Given`, `When`, and `Then` blocks in the *.step* files. This is probably due to the extra layer Cucumber adds to playwright as this is not the case with vanilla playwright
 
 
 ### Assumptions
