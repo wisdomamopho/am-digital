@@ -22,11 +22,12 @@ const testDir = defineBddConfig({
 export default defineConfig({
   testDir,
   timeout: 10 * 60 * 1000,
-  retries: 1,
+  retries: 2,
   expect: {
     timeout: 70 * 1000 
   },
   reporter: "html",
+  /* I have set the artifacts to be on just for testing purposes, on CI they should be only-on-failure. */
   use: {
     screenshot: 'on',
     trace: 'on',
@@ -41,10 +42,6 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
     },
     /*
     {
@@ -73,9 +70,9 @@ export default defineConfig({
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // or 'chrome-beta'
     },
-    {
-      name: 'Microsoft Edge',
-      use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
-    },
+    // {
+    //   name: 'Microsoft Edge',
+    //   use: { ...devices['Desktop Edge'], channel: 'msedge' }, // or 'msedge-dev'
+    // },
   ],
 });

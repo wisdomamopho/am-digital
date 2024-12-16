@@ -32,7 +32,7 @@ To start this project, you will need the latest version of Node.js and npm insta
 Clone the repo to your local
 
 ```bash
-  gh repo clone wisdomamopho/am-digital
+  git clone https://github.com/wisdomamopho/am-digital.git
 ```
 Change the directory to `am-digital`
 
@@ -47,8 +47,6 @@ Install browsers
 ```bash
  npx playwright install
 ```
-
-
     
 ## Running the test
 
@@ -58,12 +56,25 @@ to run the test files from the Gherkin documents (.feature files)
 npm test
 ``` 
 
-
 ## Run the test in watch mode
 
 To watch feature/steps files and automatically regenerate tests you can use
 ```bash
 npm run watch
+```
+
+## Cross broswer testing
+
+to run the test against other browsers, uncomment the browser-type in the `playwright.config.ts` file. Some browsers may experience issues depending on your operatinng system due to the browser executables not being native to your system i.e webkit may experience failures on windows, MsEdge on MacOS
+
+If you experience any of these issues, just select a broswer which is more native to your operating system and that should resolve it
+
+```
+{
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
 ```
 
 ## Reports

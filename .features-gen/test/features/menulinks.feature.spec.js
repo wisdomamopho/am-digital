@@ -3,7 +3,7 @@ import { test } from "../../../test/steps/page-objects/common.fixture.ts";
 
 test.describe("Validate Menu Links", () => {
 
-  test("Timeline Content Block Hyperlink", { tag: ["@__bdd"] }, async ({ Given, myCommonPage, And, page, When, Then }) => {
+  test("Timeline Content Block Hyperlink", async ({ Given, myCommonPage, And, page, When, Then }) => {
     await Given("I am on any page of the Quartex Published Site", null, { myCommonPage });
     await And("user has navigated to a Timeline content block", null, { page });
     await When("user scrolls to the hyperlink on the Timeline content block", null, { page });
@@ -23,6 +23,6 @@ test.use({
 });
 
 const bddFileMeta = {
-  "Timeline Content Block Hyperlink": {"pickleLocation":"3:1","tags":["@__bdd"],"ownTags":["@__bdd"]},
+  "Timeline Content Block Hyperlink": {"pickleLocation":"3:1"},
   "": {"pickleLocation":"16:1"},
 };
